@@ -202,4 +202,4 @@ def predict(neighbourhood,accommodates,room_type,min_nights,bedrooms,baths):
 
 
 
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column2])
