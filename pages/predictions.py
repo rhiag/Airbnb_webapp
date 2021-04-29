@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output
 from app import app
 from joblib import load
 import pandas as pd
-pipeline = load('notebooks/model.joblib')
+pipeline = load('./notebooks/model.joblib')
 
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
