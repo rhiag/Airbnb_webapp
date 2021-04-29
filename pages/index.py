@@ -16,17 +16,16 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Welcome to San Fransisco!
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            Enjoy some of the best weather , diverse cuisines , great shopping districts and attractions such as antique cable cars, the Golden Gate bridge, Fisherman’s Wharf and Pier 39, wine country, Alcatraz, Muir Woods’ 1000 year-old redwood forest and so much more!
+            
+            This app helps you find a place to stay that fits in your budget.          
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
-
+            
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Next', color='primary'), href='/predictions')
     ],
     md=4,
 )
@@ -37,7 +36,8 @@ fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size
 
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        #dcc.Graph(figure=fig),
+        html.Div(html.Img(src=app.get_asset_url('download.jpeg')), style={'height':'10%', 'width':'10%'})
     ]
 )
 
